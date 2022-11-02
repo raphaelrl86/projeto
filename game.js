@@ -6,7 +6,7 @@ const words = ["Jabu", "Ichi", "Nachi", "Ban", "Geki", "June", "Marin", "Shaina"
 // 2. Sortear uma palavra aleatória dentro desse array
 
 const randomWord = Math.floor(Math.random()*words.length)
-//console.log(words[randomWord])
+console.log(words[randomWord])
 const MAX_ERRORS = 6
 let correctAttempts = 0
 let failures = 0
@@ -14,6 +14,16 @@ const secretWord = words[randomWord].toUpperCase()
 
 const correctLetters = []
 const wrongLetters = []
+
+document.addEventListener("keydown", (event) => {
+    const code = event.keyCode
+    if(isLetters(code)) {
+        const letters = event.key
+    }
+}
+)
+
+
 
 function hasTheLetter (letter, secretWord) {
     let letterFound = false
@@ -48,6 +58,13 @@ function playGame()  {
 
 playGame()
 
+function showWrongLetters () {
+    const div = document.querySelector(".wrong-letters")
+    div.innerHTML = "<h3>Letras erradas</h3>"
+    wrongLetters.forEach((letter) => {
+        div.innerHTML += `<span>${letter}</span>`
+    });
+}
 
 
 
