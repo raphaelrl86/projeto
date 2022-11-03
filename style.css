@@ -7,7 +7,7 @@ body {
     overflow: hidden;
     background-color: #222;
     color: aliceblue;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Ubuntu', sans-serif;
   }
   
   .game-container {
