@@ -4,6 +4,7 @@ const button = document.getElementById("start")
 const failureLetters = document.getElementById("wrong")
 const choice = document.querySelector("input")
 const knightsLetter = document.querySelector(".secret-word-container")
+const endGameMessage = document.getElementById("end-game-message")
 
 // 1. Criar array com as palavras
 const words = ["Jabu", "Ichi", "Nachi", "Ban", "Geki", "June", "Marin", "Shaina", "Misty", "Moses", "Babel", "Asterion", "Jamian", "Algol", "Capella", "Algethi", "Dante", "Dio", "Sirius", "Ptolemeu", "Daidalos", "Orpheu", "Suikyo", "Mu", "Aldebaran", "Saga", "Kanon", "Deathmask", "Aiolia", "Shaka", "Dohko", "Milo", "Aiolos", "Shura", "Camus", "Aphrodite", "Siegfried", "Hagen", "Thor", "Alberich", "Fenrir", "Syd", "Bud", "Mime", "Seiya", "Shun", "Shiryu", "Hyoga", "Ikki"]
@@ -27,12 +28,13 @@ function hasTheLetter (letter, secretWord) {
             if (letter === secretWord[i]) {
                 correctLetters[i] = letter
                 correctAttempts++
-                knightsLetter.innerHTML = correctLetters.join("")
+                // knightsLetter.innerHTML = correctLetters.join(" ")
                 endGame()
-            } else {
-                knightsLetter.innerHTML += `<span>_</span>`
-            }
-        }
+            } else if (!correctLetters[i]){ 
+                correctLetters[i] = "_"
+                }
+        } 
+        knightsLetter.innerHTML = correctLetters.join(" ")
     }
     
     if(!letterFound){
@@ -51,10 +53,12 @@ function playGame()  {
 }
 
 function endGame() {
-    if (failures === 6 || knightsLetter.innerHTML.length === secretWord.length) {
-        console.log("Fim de jogo")
-    } 
-}
+    if (failures === 6) {
+        endGameMessage.innerHTML = "Você perdeu!!!"
+    } else if (correctLetters.join("") === secretWord) {
+        endGameMessage.innerHTML = "Parabéns, você acertou!!!"
+    }
+  }
 
 button.addEventListener('click', playGame)
     // let letter = prompt('DIGITE UMA LETRA');
