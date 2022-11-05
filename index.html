@@ -8,46 +8,37 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"> 
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
-      rel="stylesheet"
-    /> -->
+   
     <title>Jogo da Forca</title>
   </head>
   <body>
     <h1>Jogo da forca</h1>
     <h2>Digite no teclado uma letra e tente adivinhar qual o nome do Cavaleiro!</h2>
     <div class="jogo-container">
-      <div class="forca-container">
         <input type="text" placeholder="Escolha sua letra">
         <button id = "start">Inserir letra</button>
-        
+              
       </div>
+      
       <h1>Cavaleiro</h1> 
       <p class="secret-word-container">  
       </p>
-
+      
       <div class="wrong-letters">
         <h3>Letras erradas</h3>
         <span id = "wrong"></span>
-      </div>
+        <p id = "attempts"></p>
+        </div>
 
       <div class="end-game">
         <h3 id = "end-game-message"></h3>
       </div>
 
   </div>
+  <audio id="win-audio" src="./assets/winaudio.mp3"></audio>
+  <audio id="defeat-audio" src="./assets/defeat.mp3"></audio>
+  <audio id="bg-audio" class="bg-audio-active" loop="true" src="./assets/bg.mp3"></audio>
 
- 
-
-    <!-- <div class="repeat-letter-alert">
-      Você já usou essa letra!
-    </div> -->
-
-    
-
-    <script src="game.js"></script>
+       <script src="game.js"></script>
   </body>
 </html>

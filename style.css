@@ -5,77 +5,68 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background-color: #222;
+    background-color: rgb(36, 37, 83);
     color: aliceblue;
     font-family: 'Ubuntu', sans-serif;
   }
   
-  .game-container {
-    display: flex;
-    justify-content: space-evenly;
+ 
+  .wrong-letters h3 {
     width: 100%;
+    align-self: center;
+    justify-content: center;
+    display: flex;
   }
-   
+
+.cavaleiro h1{
+  width: 100%;
+  align-self: center;
+  justify-content: center;
+  display: flex;
+}
+
+
   .wrong-letters {
     font-size: 32px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  #imagem {
+    width: 30%;
   }
   
+  .display-none {
+    display: none;
+  }
   .wrong-letters span {
-    margin: 0 2px;
+   
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    border: 2px dotted white;    
+    padding: 5px;
+    justify-content: center;
+    letter-spacing: 10px;
+    
   }
   
   .secret-word-container {
     font-size: 45px;
   }
-  
-  /* .repeat-letter-alert {
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 10px 10px 0 0;
-    padding: 15px 20px;
-    position: absolute;
-    bottom: -55px;
-    transition: transform 0.3s ease-in-out;
+
+  #end-game-message {
+    justify-content: center;
+    align-items: center;
+    display: flex;
   }
   
-  .repeat-letter-alert p {
-    margin: 0;
-  } */
   
-  /* .repeat-letter-alert.show {
-    transform: translateY(-50px);
-  }
-   */
   .secret-word-container span {
     margin: 0 5px;
   }
   
-  /* .popup-container {
-    background-color: rgba(0, 0, 0, 0.849);
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    display: none;
-    align-items: center;
-    justify-content: center;
-  }
-   */
-  /* .popup {
-    background: #2980b9;
-    border-radius: 5px;
-    box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-  }
-   */
-  /* .popup button {
-    cursor: pointer;
-    background-color: #fff;
-    border: 0;
-    margin-top: 20px;
-    padding: 12px 20px;
-    font-size: 16px;
-  }
-   */
+  
