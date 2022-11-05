@@ -47,7 +47,7 @@ body {
     margin: 5px;
     display: flex;
     align-items: center;
-    border: 2px dotted white;    
+    border: 2px;    
     padding: 5px;
     justify-content: center;
     letter-spacing: 10px;
